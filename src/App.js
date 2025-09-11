@@ -1,5 +1,9 @@
+import Body from './components/Body'
+
 const App = () => {
-  return <h1 className="">Netflix GPT</h1>
+  return <div>
+    <Body />
+  </div>
 }
 
 export default App;
