@@ -4,6 +4,8 @@ import { checkValidData } from '../utils/validate'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux';
+import { NETFLIX_POSTER, NETFLIX_USER } from '../utils/constant';
+
 
 
 const Login = () => {
@@ -35,7 +37,7 @@ const Login = () => {
                     // Signed up 
                     const user = userCredential.user;
                     updateProfile(user, {
-                        displayName: fname.current.value, photoURL: "https://avatars.githubusercontent.com/u/22058199?v=4"
+                        displayName: fname.current.value, photoURL: NETFLIX_USER
                     }).then(() => {
                         // Profile updated!
                         dispatch();
@@ -72,7 +74,7 @@ const Login = () => {
             <Header />
             <div className='absolute'>
                 {/* Netflix Home Page Banner */}
-                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/0b0dad79-ad4d-42b7-b779-8518da389976/web/IN-en-20250908-TRIFECTA-perspective_0647b106-80e1-4d25-9649-63099752b49a_large.jpg" alt="Netflix Home Page Banner" />
+                <img src={NETFLIX_POSTER} alt="Netflix Home Page Banner" />
             </div>
             <form className='absolute w-3/12 p-12 bg-black my-24 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80'>
                 <h1 className='font-bold text-3xl py-4'>{isSignInForm ? 'Sign In' : "Sign Up"}</h1>
