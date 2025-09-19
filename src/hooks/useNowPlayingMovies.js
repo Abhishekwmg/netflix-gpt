@@ -12,6 +12,7 @@ const useNowPlayingMovies = () => {
         dispatch(addNowplayingMovies(json.results));
     }
 
+
     useEffect(() => {
         getNowPlayingMovie();
     }, [])
