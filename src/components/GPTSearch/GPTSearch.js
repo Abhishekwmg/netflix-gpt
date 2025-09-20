@@ -6,7 +6,7 @@ import { NETFLIX_POSTER } from '../../utils/constant';
 const GPTSearch = () => {
     return (
         <div>
-            <div className='absolute -z-10 blur-[2px]'>
+            <div className='absolute -z-10 blur-[1px]'>
                 <img src={NETFLIX_POSTER} alt="Netflix Home Page Banner" />
             </div>
             <GPTSearchBar />
